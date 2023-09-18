@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botonera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light" id="body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navBar">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2" href="#">La botonera</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <button class="btn btn-outline-warning" id="darkLight">Dark/Light</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <!-- boton 1 -->
+            <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border">
+                <button class="btn btn-success btn-lg col-12" id="boton" onclick="reproducirAudio(1)">The Fat Rat</button>
+                <audio id="audio1" class="audio" src="audio/TheFatRat_-_Unity.mp3"></audio>
+                <input type="range" id="barraVolumen" class="form-range" min="0" max="1" step="0.025" value="1">
+                <div class="row justify-content-center">
+                    <button class="btn btn-secondary btn-ms col-4" id="botonDetener" onclick="pausarAudio(1)">Pausar</button>
+                    <button class="btn btn-outline-primary btn-ms col-4" id="botonBucle" onclick="bucleAudio(1)">Loop</button>
+                </div>
+            </div>
+            <!-- boton 2 -->
+            <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border">
+                <button class="btn btn-success btn-lg col-12" id="boton" onclick="reproducirAudio(2)">Tutoriales Lucio</button>
+                <audio id="audio2" class="audio" src="audio/royalty_free_para_pobres.mp3"></audio>
+                <input type="range" id="barraVolumen" class="form-range" min="0" max="1" step="0.025" value="1">
+                <div class="row justify-content-center">
+                    <button class="btn btn-secondary btn-ms col-4" id="botonDetener" onclick="pausarAudio(2)">Pausar</button>
+                    <button class="btn btn-outline-primary btn-ms col-4" id="botonBucle" onclick="bucleAudio(2)">Loop</button>
+                </div>
+            </div>
+            <!-- boton 3 -->
+            <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border">
+                <button class="btn btn-success btn-lg col-12"  id="boton" onclick="reproducirAudio(3)">Piano Dross</button>
+                <audio id="audio3" class="audio" src="audio/piano_perturbador_de_dross_sonido.mp3"></audio>
+                <input type="range" id="barraVolumen" class="form-range" min="0" max="1" step="0.025" value="1">
+                <div class="row justify-content-center">
+                    <button class="btn btn-secondary btn-ms col-4" id="botonDetener" onclick="pausarAudio(3)">Pausar</button>
+                    <button class="btn btn-outline-primary btn-ms col-4" id="botonBucle" onclick="bucleAudio(3)">Loop</button>
+                </div>
+            </div>
+            <!-- boton 4 -->
+            <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border">
+                <button class="btn btn-success btn-lg col-12"  id="boton" onclick="reproducirAudio(4)">Sentido de la vida</button>
+                <audio id="audio4" class="audio" src="audio/El_sentido_de_la_vida_sonido.mp3"></audio>
+                <input type="range" id="barraVolumen" class="form-range" min="0" max="1" step="0.025" value="1">
+                <div class="row justify-content-center">
+                    <button class="btn btn-secondary btn-ms col-4" id="botonDetener" onclick="pausarAudio(4)">Pausar</button>
+                    <button class="btn btn-outline-primary btn-ms col-4" id="botonBucle" onclick="bucleAudio(4)">Loop</button>
+                </div>
+            </div>
+            <!-- boton test -->
+            <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border" id="originalBox">
+                <button class="btn btn-success btn-lg col-12" id="boton" onclick="reproducirAudio(5)">test</button>
+                <audio id="audio5" class="audio" src="audio/goofy_ahh_sounds_.mp3"></audio>
+                <input type="range" id="barraVolumen" class="form-range" min="0" max="1" step="0.025" value="1">
+                <div class="row justify-content-center">
+                  <button class="btn btn-secondary btn-ms col-4" id="botonDetener" onclick="pausarAudio(5)">Pausar</button>
+                  <button class="btn btn-outline-primary btn-ms col-4" id="botonBucle" onclick="bucleAudio(5)">Loop</button>
+                </div>
+              </div>
+              <!-- boton añadir -->
+              <div class="col-4 col-lg-2 bg-dark text-center rounded p-2 m-2 border" id="añadirBox">
+                <button class="btn btn-secondary btn-lg" id="botonAñadir" onclick="duplicarElemento()">añadir</button>
+              </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
